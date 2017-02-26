@@ -1,0 +1,51 @@
+﻿<div class="container">
+    <form name="dateForm" ng-submit="calculateDateDiff(dateForm.$valid)" novalidate>
+        <div class='col-md-5'>
+            <div class="form-group" ng-class="{ 'has-error' : dateForm.fromDate.$invalid && dateForm.$submitted }">
+                <label>*From Date</label>
+                <div class='input-group date' id='fromDate'>
+                    <input type='text' name="fromDate" ng-model="date.fromDate" required class="form-control" set-date date="date.fromDate" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+                <div class="help-block" ng-messages="dateForm.fromDate.$error" ng-if="dateForm.fromDate.$invalid && dateForm.$submitted">
+                    <p ng-message="required">From Date is required.</p>
+                </div>
+            </div>
+        </div>
+        <div class='col-md-5'>
+            <div class="form-group" ng-class="{ 'has-error' : dateForm.toDate.$invalid && dateForm.$submitted }">
+                <label>*To Date</label>
+                <div class='input-group date' id='toDate'>
+                    <input type='text' name="toDate" ng-model="date.toDate" required class="form-control" set-date date="date.toDate" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+                <div class="help-block" ng-messages="dateForm.toDate.$error" ng-if="dateForm.toDate.$invalid && dateForm.$submitted">
+                    <p ng-message="required">To Date is required.</p>
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="margin-top:25px;"><i class="fa fa-lg" ng-class="{'fa-spinner fa-spin' : showSpinner }"></i> Calculate</button>
+    </form>
+    <br />
+    <br />
+    <p ng-show="response.showResponse == true" style="width: 1000px;" class="alert alert-success">
+        <b>Days Difference: </b> {{ response.days }}<br />
+    </p>
+    <br />
+    <p ng-show="error.hasError" class="alert alert-danger" style="width: 1000px;">{{ error.errorMessage }}</p>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        // Set DateTimePicker for date controls
+        $('#fromDate').datetimepicker({ useCurrent: false, format: 'DD/MM/YYYY', minDate: moment("01/01/1901") });
+        $('#toDate').datetimepicker({ useCurrent: false, format: 'DD/MM/YYYY', minDate: moment("01/01/1901") });
+    });
+</script>
+
+

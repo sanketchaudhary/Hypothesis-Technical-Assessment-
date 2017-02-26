@@ -1,0 +1,27 @@
+﻿<div class="container">
+    <form name="emailForm" ng-submit="sendEmail(emailForm.$valid)" novalidate>
+        <div class="form-group col-sm-3" ng-class="{ 'has-error' : emailForm.name.$invalid && emailForm.$submitted }">
+            <label>*Name</label>
+            <input type="text" name="name" class="form-control" ng-model="user.name" required>
+            <div class="help-block" ng-messages="emailForm.name.$error" ng-if="emailForm.name.$invalid && emailForm.$submitted">
+                <p ng-message="required">Your name is required.</p>
+            </div>
+        </div>
+        <div class="form-group col-sm-3" ng-class="{ 'has-error' : emailForm.email.$invalid && emailForm.$submitted }">
+            <label>*Email</label>
+            <input type="email" name="email" class="form-control" ng-model="user.email" required>
+            <div class="help-block" ng-messages="emailForm.email.$error" ng-if="emailForm.email.$invalid && emailForm.$submitted">
+                <p ng-message="required">Email is required.</p>
+                <p ng-message="email">Email is invalid.</p>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="margin-top:25px;"><i class="fa fa-lg" ng-class="{'fa-spinner fa-spin' : showSpinner }"></i> Send Email</button>
+    </form>
+    <br />
+    <br />
+    <p ng-show="response.showResponse == true" style="width: 1000px;" class="alert alert-success">
+        Email sent successfully
+    </p><br />
+    <p ng-show="error.hasError" class="alert alert-danger" style="width: 1000px;">{{ error.errorMessage }}</p>
+</div>

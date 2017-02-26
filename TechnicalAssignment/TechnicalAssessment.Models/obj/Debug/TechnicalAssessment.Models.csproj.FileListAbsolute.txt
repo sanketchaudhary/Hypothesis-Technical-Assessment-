@@ -1,0 +1,8 @@
+E:\Research\Interview\TechnicalAssignment\TechnicalAssessment.Models\bin\Debug\TechnicalAssessment.Models.dll
+E:\Research\Interview\TechnicalAssignment\TechnicalAssessment.Models\bin\Debug\TechnicalAssessment.Models.pdb
+E:\Research\Interview\TechnicalAssignment\TechnicalAssessment.Models\obj\Debug\TechnicalAssessment.Models.dll
+E:\Research\Interview\TechnicalAssignment\TechnicalAssessment.Models\obj\Debug\TechnicalAssessment.Models.pdb
+E:\Research\Interview\27Feb2017\TechnicalAssignment\TechnicalAssessment.Models\bin\Debug\TechnicalAssessment.Models.dll
+E:\Research\Interview\27Feb2017\TechnicalAssignment\TechnicalAssessment.Models\bin\Debug\TechnicalAssessment.Models.pdb
+E:\Research\Interview\27Feb2017\TechnicalAssignment\TechnicalAssessment.Models\obj\Debug\TechnicalAssessment.Models.dll
+E:\Research\Interview\27Feb2017\TechnicalAssignment\TechnicalAssessment.Models\obj\Debug\TechnicalAssessment.Models.pdb
